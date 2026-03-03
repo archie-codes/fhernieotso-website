@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fhernieotso — Poultry Farm & Fresh Produce",
+  title: "Fhernieotso",
   description:
     "Fhernieotso delivers fresh eggs, healthy chicks, and trusted farm updates. Quality poultry care powered by nature.",
 };
