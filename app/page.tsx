@@ -40,7 +40,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm sm:h-10 sm:w-10 sm:rounded-[12px]">
               <Image
-                src="/fhernieotso-logo.png"
+                src="/logo.png"
                 alt="Fhernieotso logo"
                 width={36}
                 height={36}
@@ -70,7 +70,7 @@ export default function Home() {
           {/* Logo card */}
           <div className="mb-10 inline-block rounded-2xl border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur-md sm:mb-12 sm:rounded-[24px] sm:p-4">
             <Image
-              src="/fhernieotso-logo.png"
+              src="/logo.png"
               alt="Fhernieotso Poultry Farm"
               width={120}
               height={120}
