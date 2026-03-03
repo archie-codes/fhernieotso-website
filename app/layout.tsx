@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: "Fhernieotso",
   description:
     "Fhernieotso delivers fresh eggs, healthy chicks, and trusted farm updates. Quality poultry care powered by nature.",
+  icons: {
+    icon: "/logo.svg",
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
