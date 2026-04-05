@@ -58,10 +58,34 @@ function DialogContent({
   return (
     <DialogPortal data-slot="dialog-portal">
       <DialogOverlay />
+      <style>{`
+        @keyframes custom-modal-bounce {
+          0% {
+            opacity: 0;
+            transform: scale(0.3);
+          }
+          60% {
+            opacity: 1;
+            transform: scale(1.05);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        .animate-custom-modal[data-state="open"] {
+          animation: custom-modal-bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        .animate-custom-modal[data-state="closed"] {
+          transition: all 0.2s ease-in;
+          opacity: 0;
+          transform: scale(0.95);
+        }
+      `}</style>
       <DialogPrimitive.Content
         data-slot="dialog-content"
         className={cn(
-          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 outline-none sm:max-w-lg",
+          "bg-background animate-custom-modal fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-2xl outline-none sm:max-w-lg",
           className
         )}
         {...props}
